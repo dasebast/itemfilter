@@ -1,0 +1,231 @@
+#############################################################################
+#---------------------------------------------------------------------------#
+#     Beta Loot Filter v1.0                                                 #
+#---------------------------------------------------------------------------#
+#############################################################################
+
+
+Show
+    Class Hideout Doodads
+
+Show
+    Class Microtransactions
+
+Show
+    Class Quest Items
+
+
+# GEMS
+# -------------------------------------------------------------------------
+Show
+    Class Gem
+    Quality >= 5
+    SetBorderColor 27 162 155
+    SetFontSize 38
+
+Show
+    Class Gem
+
+# 5-6Links / 6S
+# -------------------------------------------------------------------------
+Show
+    LinkedSockets 6
+    SetTextColor 255 0 255
+    SetBorderColor 255 0 255
+    SetFontSize 42
+
+Show
+    LinkedSockets 5
+    SetBorderColor 230 76 76
+
+Show
+    Sockets 6
+    SetBorderColor 230 76 76
+    SetFontSize 38
+
+#Rare Drops
+# -------------------------------------------------------------------------
+Show
+    Class "Fishing Rod"
+    SetTextColor 255 0 255
+    SetBorderColor 255 0 255
+    PlayAlertSound 1
+
+Show
+    BaseType "Albino Rhoa Feather"
+    SetTextColor  255 0 255
+    SetBorderColor  255 0 255
+    PlayAlertSound 1
+
+#All Uniques
+# -------------------------------------------------------------------------
+Show
+    Rarity Unique
+    SetBorderColor 175 96 37
+    SetFontSize 38
+
+#Jewels
+# -------------------------------------------------------------------------
+Show
+    BaseType "Crimson Jewel" "Cobalt Jewel" "Viridian Jewel"
+    SetBorderColor 119 53 250
+
+
+# Currency
+# -------------------------------------------------------------------------
+Show
+    BaseType "Mirror of Kalandra" "Eternal Orb" "Divine Orb" "Exalted Orb"
+    SetTextColor 255 0 255
+    SetBorderColor 255 0 255
+    PlayAlertSound 1
+    SetFontSize 42
+
+Show
+    BaseType "Portal Scroll" "Scroll of Wisdom" "Armourer's Scrap" "Blacksmith's Whetstone"
+
+Show
+    Class Currency
+    SetBorderColor 170 158 130
+    SetFontSize 38
+
+Show
+    Class Stackable Currency
+
+# Rares (iLVL Highlighting)
+# -------------------------------------------------------------------------
+#75+ Regal
+Show
+    Rarity Rare
+    ItemLevel >= 75
+    SetTextColor 255 255 119
+    SetBorderColor 238 186 84 200
+
+#60+ Chaos
+Show
+    Rarity Rare
+    ItemLevel >= 60
+    SetTextColor 255 255 119
+    SetBorderColor 255 255 119 200
+
+Show
+    Rarity Rare
+
+#Vendor Recipes
+# -------------------------------------------------------------------------
+Show
+    SocketGroup RGB
+    SetBorderColor 230 76 76
+    SetFontSize 38
+
+Show
+    Rarity Normal
+    BaseType "Gavel" "Rock Breaker" "Stone Hammer"
+
+Show
+    Rarity Magic
+    BaseType "Gavel" "Rock Breaker" "Stone Hammer"
+    Quality >= 12
+
+Show
+    Class Flask
+    Quality >= 5
+    SetBorderColor 100 100 100
+
+#Maps
+# -------------------------------------------------------------------------
+Show
+    Class "Map" "Map Fragments"
+
+#Utility Flasks
+# -------------------------------------------------------------------------
+Show
+    BaseType "Flask"
+    BaseType "Amethyst" "Diamond" "Quartz" "Ruby" "Sapphire"  "Topaz"
+
+    BaseType "Flask"
+    BaseType "Granite" "Jade" "Quicksilver"
+    SetBorderColor 161 222 198
+
+Show
+    BaseType "Flask"
+    Quality >= 4
+    SetBorderColor 80 80 80
+
+# Show All 4s until lvl 65
+# -------------------------------------------------------------------------
+Show
+    LinkedSockets = 4
+    ItemLevel < 65
+
+############################################################################
+# This is the spot where you should add the crafting whites or blues       #
+#                First show is for normals and blues                       #
+#                  Second show is for normals only                         #
+#         You must put them after the BaseType and between ""              #
+############################################################################
+
+
+Show
+    BaseType "Sai" "Demon Fangs" "Moon Staff" "Ancient Needle" "Moon Claw" "Ancient Blade" "Dragon Mace" "Maraketh Bow" "Tiger Hook" "Sacrament Wand" "Ghost Axe" "Demon Sceptre" "Morning Star" "Sacrificial Garb"
+    ItemLevel >= 66
+
+
+  Show
+    BaseType "Spike-Point Arrow Quiver" "Penetrating Arrow Quiver" "Two-Point Arrow Quiver"
+    ItemLevel >= 66
+    Rarity Normal
+
+
+#--------------------------------------------------------------------------
+#                                  Hides                                  #
+#--------------------------------------------------------------------------
+
+
+#Hide useless bases
+# -------------------------------------------------------------------------
+Hide
+    BaseType "Paua Ring" "Coral Amulet" "Studded Belt" "Cloth Belt"
+    ItemLevel >= 20
+    Rarity Normal
+
+#Show all other jewellery
+# -------------------------------------------------------------------------
+Show
+    Class "Rings" "Amulets" "Belts"
+    Rarity Normal
+
+
+#Show All Early
+# -------------------------------------------------------------------------
+Show
+    ItemLevel <= 45
+
+
+#Hide Low Level Flask at high levels
+# -------------------------------------------------------------------------
+Hide
+    BaseType Flask
+    ItemLevel >= 35
+    BaseType Small Medium Large Greater Grand
+
+Hide
+    BaseType Flask
+    ItemLevel >= 53
+    BaseType Giant Colossal Sacred
+
+
+# Hide everything else lowering the font size and transparency
+# -------------------------------------------------------------------------
+
+Show
+    Rarity Normal
+    SetTextColor 200 200 200 127
+    SetBackgroundColor 0 0 0 150
+    SetFontSize 29
+
+Show
+    Rarity Magic
+    SetTextColor 136 136 255 127
+    SetBackgroundColor 0 0 0 150
+    SetFontSize 29
+
