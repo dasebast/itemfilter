@@ -1,10 +1,47 @@
 #############################################################################
 #---------------------------------------------------------------------------#
-#     Beta Loot Filter v1.0                                                 #
+#     Beta Loot Filter v1.1                                                 #
 #---------------------------------------------------------------------------#
 #############################################################################
 
+# More info on conditions and filtering:
+# https://www.pathofexile.com/forum/view-thread/1235695/filter-account-type/staff
+# http://pathofexile.gamepedia.com/Item_filter
 
+# Alert Sound List
+# https://soundcloud.com/broa-2/sets/path-of-exile-alert-sounds
+
+# If you want more custom colors: Custom Color Palettes
+# https://docs.google.com/spreadsheets/d/1Os1BK3n4yZEEl-be_nfeZ69sCsC992tzYg0mwwas7W4/pubhtml
+
+# Current Color Legend
+# --------------------
+# Gem
+# 27 162 155 (Default Gem Color)
+# Support Gem
+# 28 131 101 (Bit darker than default)
+# White/Normal
+# 200 200 200 (Default)
+# Magic
+# 136 136 255 (Default)
+# Rare
+# 255 255 119 (Default)
+# Rare iLVL75+
+# 238 186 84 (Golden)
+# Unique
+# 175 96 37 (Default)
+# Currency
+# 170 158 130 (Default)
+# Quest Item
+# 74 230 58
+# Jewel
+# 189 163 199 (Lavender)
+# Chromatic
+# 106 212 177 (Tealish chromatic color)
+
+# -------------------------------------------------------------------------
+# Misc Default Stuff.
+# -------------------------------------------------------------------------
 Show
     Class Hideout Doodads
 
@@ -14,41 +51,153 @@ Show
 Show
     Class Quest Items
 
-
+# -------------------------------------------------------------------------
 # GEMS
+#
+# Quality gems given gem color border and larger font size.
+# Support gems given slightly darker shade of gem color.
 # -------------------------------------------------------------------------
 Show
-    Class Gem
+    Class "Active Skill Gems"
     Quality >= 5
     SetBorderColor 27 162 155
-    SetFontSize 38
+    SetFontSize 35
 
 Show
-    Class Gem
+    Class "Active Skill Gems"
 
+Show
+    Class "Support Skill Gems"
+    Quality >= 5
+    SetTextColor 28 131 101
+    SetBorderColor 28 131 101
+    SetFontSize 35
+
+Show
+    Class "Support Skill Gems"
+
+# -------------------------------------------------------------------------
 # 5-6Links / 6S
+#
+# 6L's given heavy drop sounds. Added border of default rarity colors. Large text.
+# 5L's given moderate drop sounds. Added default rarity borders. Large text.
+# 6s's given slight drop sounds.
 # -------------------------------------------------------------------------
 Show
     LinkedSockets 6
-    SetTextColor 255 0 255
-    SetBorderColor 255 0 255
+    Rarity = Normal
+    SetBorderColor 200 200 200
     SetFontSize 42
+    PlayAlertSound 5
+
+Show
+    LinkedSockets 6
+    Rarity = Magic
+    SetBorderColor 136 136 255
+    SetFontSize 42
+    PlayAlertSound 5
+
+Show
+    LinkedSockets 6
+    Rarity = Rare
+    SetBorderColor 255 255 119
+    SetFontSize 42
+    PlayAlertSound 5
+
+Show
+    LinkedSockets 6
+    Rarity = Unique
+    SetBorderColor 175 96 37
+    SetFontSize 42
+    PlayAlertSound 5
 
 Show
     LinkedSockets 5
-    SetBorderColor 230 76 76
+    Rarity = Normal
+    SetBorderColor 200 200 200
+    SetFontSize 42
+    PlayAlertSound 2
+
+Show
+    LinkedSockets 5
+    Rarity = Magic
+    SetBorderColor 136 136 255
+    SetFontSize 42
+    PlayAlertSound 2
+
+Show
+    LinkedSockets 5
+    Rarity = Rare
+    SetBorderColor 255 255 119
+    SetFontSize 42
+    PlayAlertSound 2
+
+Show
+    LinkedSockets 5
+    Rarity = Unique
+    SetBorderColor 175 96 37
+    SetFontSize 42
+    PlayAlertSound 2
 
 Show
     Sockets 6
-    SetBorderColor 230 76 76
-    SetFontSize 38
+    Rarity = Normal
+    SetBorderColor 200 200 200
+    SetFontSize 42
+    PlayAlertSound 9
 
-#Rare Drops
+Show
+    Sockets 6
+    Rarity = Magic
+    SetBorderColor 136 136 255
+    SetFontSize 42
+    PlayAlertSound 9
+
+Show
+    Sockets 6
+    Rarity = Rare
+    SetBorderColor 255 255 119
+    SetFontSize 42
+    PlayAlertSound 9
+
+Show
+    Sockets 6
+    Rarity = Unique
+    SetBorderColor 175 96 37
+    SetFontSize 42
+    PlayAlertSound 9
+
+# -------------------------------------------------------------------------
+# Novelty
+#
+# Heavy drop sound. Rarity borders. Large text.
 # -------------------------------------------------------------------------
 Show
     Class "Fishing Rod"
-    SetTextColor 255 0 255
-    SetBorderColor 255 0 255
+    Rarity = Normal
+    SetBorderColor 200 200 200
+    SetFontSize 42
+    PlayAlertSound 1
+
+Show
+    Class "Fishing Rod"
+    Rarity = Magic
+    SetBorderColor 136 136 255
+    SetFontSize 42
+    PlayAlertSound 1
+
+Show
+    Class "Fishing Rod"
+    Rarity = Rare
+    SetBorderColor 255 255 119
+    SetFontSize 42
+    PlayAlertSound 1
+
+Show
+    Class "Fishing Rod"
+    Rarity = Unique
+    SetBorderColor 175 96 37
+    SetFontSize 42
     PlayAlertSound 1
 
 Show
@@ -57,31 +206,56 @@ Show
     SetBorderColor  255 0 255
     PlayAlertSound 1
 
-#All Uniques
+# -------------------------------------------------------------------------
+# All Uniques
 # -------------------------------------------------------------------------
 Show
-    Rarity Unique
+    Rarity = Unique
     SetBorderColor 175 96 37
     SetFontSize 38
 
-#Jewels
+# -------------------------------------------------------------------------
+# Jewels
+#
+# Adds light purple border to jewels.
 # -------------------------------------------------------------------------
 Show
     BaseType "Crimson Jewel" "Cobalt Jewel" "Viridian Jewel"
-    SetBorderColor 119 53 250
+    Rarity = Normal
+    SetBorderColor 189 163 199
 
+Show
+    BaseType "Crimson Jewel" "Cobalt Jewel" "Viridian Jewel"
+    Rarity = Magic
+    SetBorderColor 189 163 199
 
+Show
+    BaseType "Crimson Jewel" "Cobalt Jewel" "Viridian Jewel"
+    Rarity = Rare
+    SetBorderColor 189 163 199
+
+# -------------------------------------------------------------------------
 # Currency
+#
+# Mirror has "mirrory" drop sound.
 # -------------------------------------------------------------------------
 Show
-    BaseType "Mirror of Kalandra" "Eternal Orb" "Divine Orb" "Exalted Orb"
-    SetTextColor 255 0 255
-    SetBorderColor 255 0 255
-    PlayAlertSound 1
+    BaseType "Mirror of Kalandra"
+    SetTextColor 0 0 0
+    SetBackgroundColor 170 158 130
+    SetBorderColor 0 0 0
+    PlayAlertSound 7
     SetFontSize 42
 
 Show
-    BaseType "Portal Scroll" "Scroll of Wisdom" "Armourer's Scrap" "Blacksmith's Whetstone"
+    BaseType "Eternal Orb" "Exalted Orb"
+    SetTextColor 255 0 255
+    SetBorderColor 255 0 255
+    PlayAlertSound 8
+    SetFontSize 42
+
+Show
+    BaseType "Portal Scroll" "Scroll of Wisdom" "Armourer's Scrap" "Blacksmith's Whetstone" "Glassblower's Bauble"
 
 Show
     Class Currency
@@ -91,108 +265,114 @@ Show
 Show
     Class Stackable Currency
 
+# -------------------------------------------------------------------------
 # Rares (iLVL Highlighting)
+#
+# iLVL 75+ has golden text and border
+# iLVL 60+ has default yellow text and border
+# iLVL 1-59 has default yellow text and no border.
 # -------------------------------------------------------------------------
 #75+ Regal
 Show
-    Rarity Rare
+    Rarity = Rare
     ItemLevel >= 75
-    SetTextColor 255 255 119
-    SetBorderColor 238 186 84 200
+    SetTextColor 238 186 84
+    SetBorderColor 238 186 84 170
 
 #60+ Chaos
 Show
-    Rarity Rare
+    Rarity = Rare
     ItemLevel >= 60
     SetTextColor 255 255 119
-    SetBorderColor 255 255 119 200
+    SetBorderColor 255 255 119 170
 
 Show
-    Rarity Rare
+    Rarity = Rare
 
-#Vendor Recipes
+# -------------------------------------------------------------------------
+# Vendor Recipes
+#
+# RGB has a teal border similar to the color of chromatics.
+# Chisel bases have gray borders and are slightly transparent.
 # -------------------------------------------------------------------------
 Show
     SocketGroup RGB
-    SetBorderColor 230 76 76
+    SetBorderColor 106 212 177 70
     SetFontSize 38
 
 Show
-    Rarity Normal
-    BaseType "Gavel" "Rock Breaker" "Stone Hammer"
+  BaseType "Gavel" "Rock Breaker" "Stone Hammer"
+  Rarity = Normal
+  SetBackgroundColor 0 0 0 200
+  SetBorderColor 100 100 100 200
+  SetTextColor 200 200 200 200
 
-Show
-    Rarity Magic
-    BaseType "Gavel" "Rock Breaker" "Stone Hammer"
-    Quality >= 12
-
-Show
-    Class Flask
-    Quality >= 5
-    SetBorderColor 100 100 100
-
-#Maps
+# -------------------------------------------------------------------------
+# Maps
+#
+# Map drops play a "mappy" drop sound.
 # -------------------------------------------------------------------------
 Show
-    Class "Map" "Map Fragments"
+    Class "Map"
+    SetFontSize 38
+    PlayAlertSound 3
 
-#Utility Flasks
+Show
+    Class "Map Fragments"
+
+# -------------------------------------------------------------------------
+# Utility Flasks
+#
+# Light green border for G/J/Q flasks.
+# Light border for quality flasks.
 # -------------------------------------------------------------------------
 Show
-    BaseType "Flask"
+    Class "Utility Flasks"
     BaseType "Amethyst" "Diamond" "Quartz" "Ruby" "Sapphire"  "Topaz"
 
-    BaseType "Flask"
+    Class "Utility Flasks"
     BaseType "Granite" "Jade" "Quicksilver"
-    SetBorderColor 161 222 198
+    SetBorderColor 161 222 198 100
+    SetFontSize 38
 
 Show
-    BaseType "Flask"
+    Class "Flasks"
     Quality >= 4
     SetBorderColor 80 80 80
 
+# -------------------------------------------------------------------------
+# Item Stuff
+#
 # Show All 4s until lvl 65
 # -------------------------------------------------------------------------
 Show
     LinkedSockets = 4
     ItemLevel < 65
 
-############################################################################
-# This is the spot where you should add the crafting whites or blues       #
-#                First show is for normals and blues                       #
-#                  Second show is for normals only                         #
-#         You must put them after the BaseType and between ""              #
-############################################################################
 
-
+#High Level Maraketh Weapons
 Show
-    BaseType "Sai" "Demon Fangs" "Moon Staff" "Ancient Needle" "Moon Claw" "Ancient Blade" "Dragon Mace" "Maraketh Bow" "Tiger Hook" "Sacrament Wand" "Ghost Axe" "Demon Sceptre" "Morning Star" "Sacrificial Garb"
-    ItemLevel >= 66
-
-
-  Show
-    BaseType "Spike-Point Arrow Quiver" "Penetrating Arrow Quiver" "Two-Point Arrow Quiver"
-    ItemLevel >= 66
-    Rarity Normal
+    BaseType "Judgement Staff" "Maraketh Bow" "Gemini Claw" "Sai" "Fleshripper" "Eclipse Staff" "Dragoon Sword" "Exquisite Blade" "Midgard Mace" "Tiger Hook" "Profane Wand" "Runic Hatchet" "Sambar Sceptre" "Coronal Maul"
 
 
 #--------------------------------------------------------------------------
-#                                  Hides                                  #
+# HIDES
 #--------------------------------------------------------------------------
-
 
 #Hide useless bases
 # -------------------------------------------------------------------------
-Hide
-    BaseType "Paua Ring" "Coral Amulet" "Studded Belt" "Cloth Belt"
-    ItemLevel >= 20
-    Rarity Normal
+Show
+    BaseType "Cloth Belt" "Studded Belt" "Paua Amulet" "Coral Amulet" "Paua Ring" "Iron Ring" "Moonstone Ring"
+    Rarity = Normal
+    SetTextColor 200 200 200 180
+    SetBackgroundColor 0 0 0 180
+    SetFontSize 25
+    ItemLevel >= 30
 
 #Show all other jewellery
 # -------------------------------------------------------------------------
 Show
     Class "Rings" "Amulets" "Belts"
-    Rarity Normal
 
 
 #Show All Early
@@ -216,15 +396,14 @@ Hide
 
 # Hide everything else lowering the font size and transparency
 # -------------------------------------------------------------------------
-
 Show
-    Rarity Normal
+    Rarity = Normal
     SetTextColor 200 200 200 127
     SetBackgroundColor 0 0 0 150
     SetFontSize 29
 
 Show
-    Rarity Magic
+    Rarity = Magic
     SetTextColor 136 136 255 127
     SetBackgroundColor 0 0 0 150
     SetFontSize 29
