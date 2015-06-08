@@ -1,6 +1,6 @@
 #############################################################################
 #---------------------------------------------------------------------------#
-#     Beta Loot Filter v1.2                                                 #
+#     Beta Loot Filter - June 5 patch update                                                 #
 #---------------------------------------------------------------------------#
 #############################################################################
 
@@ -75,6 +75,7 @@ Show
 
 Show
     Class "Support Skill Gems"
+    SetTextColor 28 131 101
 
 # -------------------------------------------------------------------------
 # 5-6Links / 6S
@@ -298,7 +299,7 @@ Show
 # -------------------------------------------------------------------------
 Show
     SocketGroup RGB
-    SetBorderColor 106 212 177 70
+    SetBorderColor 106 212 177 180
     SetFontSize 38
 
 Show
@@ -328,18 +329,19 @@ Show
 # Light border for quality flasks.
 # -------------------------------------------------------------------------
 Show
-    Class "Utility Flasks"
-    BaseType "Amethyst" "Diamond" "Quartz" "Ruby" "Sapphire"  "Topaz"
+    BaseType "Amethyst Flask" "Diamond Flask" "Quartz Flask" "Ruby Flask" "Sapphire Flask"  "Topaz Flask"
+    SetBorderColor 255 255 255 150
 
-    Class "Utility Flasks"
-    BaseType "Granite" "Jade" "Quicksilver"
-    SetBorderColor 161 222 198 100
+Show
+    BaseType "Granite Flask" "Jade Flask" "Quicksilver Flask"
+    SetTextColor 161 222 198 200
     SetFontSize 38
+
 
 Show
     Class "Flasks"
     Quality >= 4
-    SetBorderColor 80 80 80
+    SetBorderColor 150 150 150 225
 
 # -------------------------------------------------------------------------
 # Item Stuff
@@ -353,7 +355,7 @@ Show
 
 #High Level Maraketh Weapons
 Show
-    BaseType "Judgement Staff" "Maraketh Bow" "Gemini Claw" "Sai" "Fleshripper" "Eclipse Staff" "Dragoon Sword" "Exquisite Blade" "Midgard Mace" "Tiger Hook" "Profane Wand" "Runic Hatchet" "Sambar Sceptre" "Coronal Maul"
+    BaseType "Judgement Staff" "Maraketh Bow" "Gemini Claw" "Sai" "Fleshripper" "Eclipse Staff" "Dragoon Sword" "Exquisite Blade" "Tiger Hook" "Profane Wand" "Runic Hatchet" "Sambar Sceptre" "Coronal Maul"
 
 
 #--------------------------------------------------------------------------
