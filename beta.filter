@@ -1,6 +1,6 @@
 #############################################################################
 #---------------------------------------------------------------------------#
-#     Beta Loot Filter - June 5 patch update                                                 #
+#     Beta Loot Filter - June 16 patch update (Divination cards)            #
 #---------------------------------------------------------------------------#
 #############################################################################
 
@@ -50,6 +50,8 @@ Show
 
 Show
     Class Quest Items
+
+Show Class Divination Cards
 
 # -------------------------------------------------------------------------
 # GEMS
@@ -399,15 +401,9 @@ Hide
 
 # Hide everything else lowering the font size and transparency
 # -------------------------------------------------------------------------
-Show
+Hide
     Rarity = Normal
-    SetTextColor 200 200 200 127
-    SetBackgroundColor 0 0 0 150
-    SetFontSize 29
 
-Show
+Hide
     Rarity = Magic
-    SetTextColor 136 136 255 127
-    SetBackgroundColor 0 0 0 150
-    SetFontSize 29
 
