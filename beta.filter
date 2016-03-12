@@ -393,14 +393,32 @@ Show
 
 Show 
 	BaseType "Life Flask"
+    Quality >= 4
+	SetTextColor 240 120 120 180
+    SetBackgroundColor 0 0 0 190
+    SetBorderColor 150 150 150 225
+
+
+Show 
+	BaseType "Life Flask"
 	SetTextColor 240 120 120 180
     SetBackgroundColor 0 0 0 190
 
 
 Show 
 	BaseType "Mana Flask"
+    Quality >= 4
 	SetTextColor 42 116 201 220
     SetBackgroundColor 0 0 0 190
+    SetBorderColor 150 150 150 225
+    
+
+Show 
+	BaseType "Mana Flask"
+	SetTextColor 42 116 201 220
+    SetBackgroundColor 0 0 0 190
+
+
 
 Show
     Class "Flasks"
