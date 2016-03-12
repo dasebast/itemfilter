@@ -1,6 +1,6 @@
 #############################################################################
 #---------------------------------------------------------------------------#
-#     Beta Loot Filter - June 16 patch update (Divination cards)            #
+#     Loot Filter - updated on 3-12-16 for Ascendancy expansion             #
 #---------------------------------------------------------------------------#
 #############################################################################
 
@@ -39,19 +39,23 @@
 # Chromatic
 # 106 212 177 (Tealish chromatic color)
 
+
+
 # -------------------------------------------------------------------------
 # Misc Default Stuff.
 # -------------------------------------------------------------------------
 Show
-    Class Hideout Doodads
+    Class "Microtransactions"
 
 Show
-    Class Microtransactions
+    Class "Quest Items"
 
 Show
-    Class Quest Items
-
-Show Class Divination Cards
+    Class "Divination Card"
+    SetFontSize 38
+    SetTextColor 159 42 60
+    SetBorderColor 159 42 60
+    PlayAlertSound 4 300
 
 # -------------------------------------------------------------------------
 # GEMS
@@ -88,87 +92,87 @@ Show
 # -------------------------------------------------------------------------
 Show
     LinkedSockets 6
-    Rarity = Normal
+    Rarity Normal
     SetBorderColor 200 200 200
     SetFontSize 42
-    PlayAlertSound 5
+    PlayAlertSound 5 300
 
 Show
     LinkedSockets 6
-    Rarity = Magic
+    Rarity Magic
     SetBorderColor 136 136 255
     SetFontSize 42
-    PlayAlertSound 5
+    PlayAlertSound 5 300
 
 Show
     LinkedSockets 6
-    Rarity = Rare
+    Rarity Rare
     SetBorderColor 255 255 119
     SetFontSize 42
-    PlayAlertSound 5
+    PlayAlertSound 5 300
 
 Show
     LinkedSockets 6
-    Rarity = Unique
+    Rarity Unique
     SetBorderColor 175 96 37
     SetFontSize 42
-    PlayAlertSound 5
+    PlayAlertSound 5 300
 
 Show
     LinkedSockets 5
-    Rarity = Normal
+    Rarity Normal
     SetBorderColor 200 200 200
     SetFontSize 42
-    PlayAlertSound 2
+    PlayAlertSound 2 300
 
 Show
     LinkedSockets 5
-    Rarity = Magic
+    Rarity Magic
     SetBorderColor 136 136 255
     SetFontSize 42
-    PlayAlertSound 2
+    PlayAlertSound 2 300
 
 Show
     LinkedSockets 5
-    Rarity = Rare
+    Rarity Rare
     SetBorderColor 255 255 119
     SetFontSize 42
-    PlayAlertSound 2
+    PlayAlertSound 2 300
 
 Show
     LinkedSockets 5
-    Rarity = Unique
+    Rarity Unique
     SetBorderColor 175 96 37
     SetFontSize 42
-    PlayAlertSound 2
+    PlayAlertSound 2 300
 
 Show
     Sockets 6
-    Rarity = Normal
+    Rarity Normal
     SetBorderColor 200 200 200
     SetFontSize 42
-    PlayAlertSound 9
+    PlayAlertSound 9 200
 
 Show
     Sockets 6
-    Rarity = Magic
+    Rarity Magic
     SetBorderColor 136 136 255
     SetFontSize 42
-    PlayAlertSound 9
+    PlayAlertSound 9 200
 
 Show
     Sockets 6
-    Rarity = Rare
+    Rarity Rare
     SetBorderColor 255 255 119
     SetFontSize 42
-    PlayAlertSound 9
+    PlayAlertSound 9 200
 
 Show
     Sockets 6
-    Rarity = Unique
+    Rarity Unique
     SetBorderColor 175 96 37
     SetFontSize 42
-    PlayAlertSound 9
+    PlayAlertSound 9 200
 
 # -------------------------------------------------------------------------
 # Novelty
@@ -177,65 +181,107 @@ Show
 # -------------------------------------------------------------------------
 Show
     Class "Fishing Rod"
-    Rarity = Normal
+    Rarity Normal
     SetBorderColor 200 200 200
     SetFontSize 42
-    PlayAlertSound 1
+    PlayAlertSound 1 300
 
 Show
     Class "Fishing Rod"
-    Rarity = Magic
+    Rarity Magic
     SetBorderColor 136 136 255
     SetFontSize 42
-    PlayAlertSound 1
+    PlayAlertSound 1 300
 
 Show
     Class "Fishing Rod"
-    Rarity = Rare
+    Rarity Rare
     SetBorderColor 255 255 119
     SetFontSize 42
-    PlayAlertSound 1
+    PlayAlertSound 1 300
 
 Show
     Class "Fishing Rod"
-    Rarity = Unique
+    Rarity Unique
     SetBorderColor 175 96 37
     SetFontSize 42
-    PlayAlertSound 1
+    PlayAlertSound 1 300
 
 Show
     BaseType "Albino Rhoa Feather"
     SetTextColor  255 0 255
     SetBorderColor  255 0 255
-    PlayAlertSound 1
+    PlayAlertSound 1 300
 
-# -------------------------------------------------------------------------
-# All Uniques
-# -------------------------------------------------------------------------
-Show
-    Rarity = Unique
-    SetBorderColor 175 96 37
-    SetFontSize 38
+
 
 # -------------------------------------------------------------------------
 # Jewels
 #
 # Adds light purple border to jewels.
 # -------------------------------------------------------------------------
-Show
-    BaseType "Crimson Jewel" "Cobalt Jewel" "Viridian Jewel"
-    Rarity = Normal
-    SetBorderColor 189 163 199
 
 Show
-    BaseType "Crimson Jewel" "Cobalt Jewel" "Viridian Jewel"
-    Rarity = Magic
-    SetBorderColor 189 163 199
+	Rarity Unique
+	BaseType "Crimson Jewel"
+	SetBackgroundColor 94 2 2 200
+	SetBorderColor 175 96 37
+	SetFontSize 38
 
 Show
-    BaseType "Crimson Jewel" "Cobalt Jewel" "Viridian Jewel"
-    Rarity = Rare
-    SetBorderColor 189 163 199
+	Rarity Unique
+	BaseType "Viridian Jewel"
+	SetBackgroundColor 3 78 16 200
+	SetBorderColor 175 96 37
+	SetFontSize 38
+
+Show
+	Rarity Unique
+	BaseType "Cobalt Jewel"
+	SetBackgroundColor 0 75 141 200
+	SetBorderColor 175 96 37
+	SetFontSize 38
+
+Show
+	Rarity Magic
+    BaseType "Crimson Jewel"
+    SetBackgroundColor 94 2 2 200
+
+Show
+	Rarity Rare
+    BaseType "Crimson Jewel"
+    SetBackgroundColor 94 2 2 200
+
+Show
+	Rarity Magic
+    BaseType "Viridian Jewel"
+    SetBackgroundColor 4 100 20 200
+
+Show
+	Rarity Rare
+    BaseType "Viridian Jewel"
+    SetBackgroundColor 4 100 20 200
+
+Show
+    Rarity Magic
+    BaseType "Cobalt Jewel"
+    SetBackgroundColor 0 75 141 200
+
+Show
+    Rarity Rare
+    BaseType "Cobalt Jewel"
+    SetBackgroundColor 0 75 141 200
+
+
+
+
+# -------------------------------------------------------------------------
+# All Uniques
+# -------------------------------------------------------------------------
+Show
+    Rarity Unique
+    SetBorderColor 175 96 37
+    SetFontSize 38
 
 # -------------------------------------------------------------------------
 # Currency
@@ -247,7 +293,7 @@ Show
     SetTextColor 0 0 0
     SetBackgroundColor 170 158 130
     SetBorderColor 0 0 0
-    PlayAlertSound 7
+    PlayAlertSound 7 300
     SetFontSize 42
 
 Show
@@ -255,7 +301,7 @@ Show
     SetTextColor 0 0 0
     SetBackgroundColor 170 158 130
     SetBorderColor 0 0 0
-    PlayAlertSound 8
+    PlayAlertSound 8 300
     SetFontSize 42
 
 Show
@@ -270,6 +316,22 @@ Show
     Class Stackable Currency
 
 # -------------------------------------------------------------------------
+# Maps
+#
+# Map drops play a "mappy" drop sound.
+# -------------------------------------------------------------------------
+Show
+    Class "Maps"
+    SetFontSize 38
+    PlayAlertSound 3 200
+    SetBackgroundColor 50 50 50
+
+Show
+    Class "Maps" "Map Fragments"
+
+
+
+# -------------------------------------------------------------------------
 # Rares (iLVL Highlighting)
 #
 # iLVL 75+ has golden text and border
@@ -278,20 +340,20 @@ Show
 # -------------------------------------------------------------------------
 #75+ Regal
 Show
-    Rarity = Rare
+    Rarity Rare
     ItemLevel >= 75
     SetTextColor 238 186 84
     SetBorderColor 238 186 84 170
 
 #60+ Chaos
 Show
-    Rarity = Rare
+    Rarity Rare
     ItemLevel >= 60
     SetTextColor 255 255 119
     SetBorderColor 255 255 119 170
 
 Show
-    Rarity = Rare
+    Rarity Rare
 
 # -------------------------------------------------------------------------
 # Vendor Recipes
@@ -305,24 +367,12 @@ Show
     SetFontSize 38
 
 Show
-  BaseType "Gavel" "Rock Breaker" "Stone Hammer"
-  Rarity = Normal
-  SetBackgroundColor 0 0 0 200
-  SetBorderColor 100 100 100 200
-  SetTextColor 200 200 200 200
+    BaseType "Gavel" "Rock Breaker" "Stone Hammer"
+    Rarity Normal
+    SetBackgroundColor 0 0 0 200
+    SetBorderColor 100 100 100 200
+    SetTextColor 200 200 200 200
 
-# -------------------------------------------------------------------------
-# Maps
-#
-# Map drops play a "mappy" drop sound.
-# -------------------------------------------------------------------------
-Show
-    Class "Map"
-    SetFontSize 38
-    PlayAlertSound 3
-
-Show
-    Class "Map Fragments"
 
 # -------------------------------------------------------------------------
 # Utility Flasks
@@ -331,14 +381,26 @@ Show
 # Light border for quality flasks.
 # -------------------------------------------------------------------------
 Show
-    BaseType "Amethyst Flask" "Diamond Flask" "Quartz Flask" "Ruby Flask" "Sapphire Flask"  "Topaz Flask"
+    BaseType "Amethyst Flask" "Diamond Flask" "Quartz Flask" "Ruby Flask" "Sapphire Flask"  "Topaz Flask"  "Basalt Flask" "Aquamarine Flask" "Stibnite Flask" "Sulphur Flask" "Silver Flask" "Bismuth Flask"
     SetBorderColor 255 255 255 150
+    SetTextColor 161 222 198 200
+
 
 Show
     BaseType "Granite Flask" "Jade Flask" "Quicksilver Flask"
     SetTextColor 161 222 198 200
-    SetFontSize 38
+    SetFontSize 36
 
+Show 
+	BaseType "Life Flask"
+	SetTextColor 240 120 120 180
+    SetBackgroundColor 0 0 0 190
+
+
+Show 
+	BaseType "Mana Flask"
+	SetTextColor 42 116 201 220
+    SetBackgroundColor 0 0 0 190
 
 Show
     Class "Flasks"
@@ -357,7 +419,7 @@ Show
 
 #High Level Maraketh Weapons
 Show
-    BaseType "Judgement Staff" "Maraketh Bow" "Gemini Claw" "Sai" "Fleshripper" "Eclipse Staff" "Dragoon Sword" "Exquisite Blade" "Tiger Hook" "Profane Wand" "Runic Hatchet" "Sambar Sceptre" "Coronal Maul"
+    BaseType "Judgement Staff" "Assassin Bow" "Gemini Claw" "Sai" "Fleshripper" "Eclipse Staff" "Dragoon Sword" "Exquisite Blade" "Tiger Hook" "Profane Wand" "Runic Hatchet" "Sambar Sceptre" "Coronal Maul"
 
 
 #--------------------------------------------------------------------------
@@ -368,7 +430,7 @@ Show
 # -------------------------------------------------------------------------
 Show
     BaseType "Cloth Belt" "Studded Belt" "Paua Amulet" "Coral Amulet" "Paua Ring" "Iron Ring" "Moonstone Ring"
-    Rarity = Normal
+    Rarity Normal
     SetTextColor 200 200 200 180
     SetBackgroundColor 0 0 0 180
     SetFontSize 25
@@ -402,8 +464,7 @@ Hide
 # Hide everything else lowering the font size and transparency
 # -------------------------------------------------------------------------
 Hide
-    Rarity = Normal
+    Rarity Normal
 
 Hide
-    Rarity = Magic
-
+    Rarity Magic
