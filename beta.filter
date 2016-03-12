@@ -63,6 +63,8 @@ Show
 # Quality gems given gem color border and larger font size.
 # Support gems given slightly darker shade of gem color.
 # -------------------------------------------------------------------------
+
+
 Show
     Class "Active Skill Gems"
     Quality >= 5
@@ -74,7 +76,7 @@ Show
 
 Show
     Class "Support Skill Gems"
-    Quality >= 5
+    Quality >= 1
     SetTextColor 28 131 101
     SetBorderColor 28 131 101
     SetFontSize 35
@@ -273,8 +275,6 @@ Show
     SetBackgroundColor 0 75 141 200
 
 
-
-
 # -------------------------------------------------------------------------
 # All Uniques
 # -------------------------------------------------------------------------
@@ -382,8 +382,7 @@ Show
 # -------------------------------------------------------------------------
 Show
     BaseType "Amethyst Flask" "Diamond Flask" "Quartz Flask" "Ruby Flask" "Sapphire Flask"  "Topaz Flask"  "Basalt Flask" "Aquamarine Flask" "Stibnite Flask" "Sulphur Flask" "Silver Flask" "Bismuth Flask"
-    SetBorderColor 255 255 255 150
-    SetTextColor 161 222 198 200
+    SetTextColor 144 203 212 200
 
 
 Show
@@ -398,7 +397,6 @@ Show
     SetBackgroundColor 0 0 0 190
     SetBorderColor 150 150 150 225
 
-
 Show 
 	BaseType "Life Flask"
 	SetTextColor 240 120 120 180
@@ -411,14 +409,11 @@ Show
 	SetTextColor 42 116 201 220
     SetBackgroundColor 0 0 0 190
     SetBorderColor 150 150 150 225
-    
 
 Show 
 	BaseType "Mana Flask"
 	SetTextColor 42 116 201 220
     SetBackgroundColor 0 0 0 190
-
-
 
 Show
     Class "Flasks"
